@@ -22,7 +22,8 @@ Topic - 2. If you want to select particular column from a table then the syntax 
 Topic - 3.Understanding WHERE clause
 
   SYNTAX:
-    If we want to select particular criteria from a particular column then we use WHERE clause.
+    If we want to select particular criteria from a particular column then we use WHERE clause. It is more of like a 'condition' statement in SQL not proper but similar.
+    
     select column1, column2, column3
     from tablename
     where column3 = 'Any criteria you want to mention like age > 25 or salary < 50,000 anything'
@@ -32,3 +33,88 @@ Topic - 3.Understanding WHERE clause
     select first_name, last_name, hire_date
     from employees
     where title = 'Sales Representative';
+
+
+Topic - 4. Understanding IN and NOT IN clause.
+
+  SYNTAX: If you want multiple itms from same column then you use IN clause and if you do not want multiple items from same column then you use NOT IN caluse.
+
+    select column_1,column_2,.....,column_n
+    from tablename
+    where column_4 IN ('item_1','item_2','item_3');
+
+    select column_1,column_2,.....,column_n
+    from tablename
+    where column_4 NOT IN ('item_1','item_2','item_3');
+
+  Q- Give me all the details of orders placed in cuntry USA, sweden and germany
+    
+    select * from orders
+    where ship_country in ('USA','Sweden','Germany')
+
+
+Topic - 5. Understanding ORDER BY clause and very IMPORTANT to understand this clause.
+
+  SYNTAX: If you want to order your output on certain condition like order by column_name ascending or desceding or anything the we use ORDER BY clause.
+
+    select column_1, column_2, ......, column_n
+    from tablename
+    where column_1 'condition'
+    order by column_3 'condition'
+
+  Q- For all the employees in the Employees table, show the FirstName, LastName, Title, and BirthDate. Order the results by BirthDate, so we have the oldest employees first.
+
+      select first_name, last_name, title, birth_date
+      from employees
+      order by birth_date;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
