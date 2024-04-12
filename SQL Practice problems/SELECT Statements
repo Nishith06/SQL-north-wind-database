@@ -1,0 +1,6 @@
+--1. Get all columns from the tables Customers, Orders and Suppliers
+
+SYNTAX
+select * from table_name
+
+select * from customers, orders, suppliers
