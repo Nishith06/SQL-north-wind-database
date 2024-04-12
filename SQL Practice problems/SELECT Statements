@@ -1,6 +1,34 @@
---1. Get all columns from the tables Customers, Orders and Suppliers
+----------------------------------- REMEMBER EVERY QUERY HERE IS IN REGARDS OF NORTHWIND DATABASE ------------------------------
 
-SYNTAX
-select * from table_name
+Topic - 1. Get all columns from the tables Customers, Orders and Suppliers
 
-select * from customers, orders, suppliers
+  SYNTAX:
+  select * from table_name
+
+  select * from customers, orders, suppliers;
+  select * from shippers;
+
+
+Topic - 2. If you want to select particular column from a table then the syntax is as follows
+
+  SYNTAX:
+  select column1_name, column2_name, column3_name, ..........., column_n_name
+  from tablename;
+  
+  select first_name, last_name, birth_date
+  from employees;
+
+
+Topic - 3.Understanding WHERE clause
+
+  SYNTAX:
+    If we want to select particular criteria from a particular column then we use WHERE clause.
+    select column1, column2, column3
+    from tablename
+    where column3 = 'Any criteria you want to mention like age > 25 or salary < 50,000 anything'
+
+  Q- We’d like to see just the FirstName, LastName, and HireDate of all the employees with the Title of Sales Representative. Write a SQL statement that returns only those employees.
+    
+    select first_name, last_name, hire_date
+    from employees
+    where title = 'Sales Representative';
